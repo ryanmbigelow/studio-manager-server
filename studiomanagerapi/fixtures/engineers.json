@@ -1,0 +1,24 @@
+[
+  {
+      "model": "studiomanagerapi.engineer",
+      "pk": 1,
+      "fields": {
+          "first_name": "Ryan",
+          "last_name": "Bigelow",
+          "is_admin": true,
+          "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gull_portrait_ca_usa.jpg/1920px-Gull_portrait_ca_usa.jpg",
+          "uid": "123honeybee"
+      }
+  },
+  {
+    "model": "studiomanagerapi.engineer",
+    "pk": 2,
+    "fields": {
+        "first_name": "Thomas",
+        "last_name": "Luminoso",
+        "is_admin": false,
+        "profile_picture": "https://tinypng.com/images/social/website.jpg",
+        "uid": "456thebandcalledstyx"
+    }
+  }
+]

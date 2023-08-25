@@ -1,0 +1,82 @@
+[
+  {
+      "model": "studiomanagerapi.gear",
+      "pk": 1,
+      "fields": {
+          "model": "SM57",
+          "brand": "Shure",
+          "category_id": 2,
+          "engineer_id": 1
+      }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 2,
+    "fields": {
+        "model": "Fat Head II Ribbon",
+        "brand": "Cascade",
+        "category_id": 2,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 3,
+    "fields": {
+        "model": "U87",
+        "brand": "Neumann",
+        "category_id": 2,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 4,
+    "fields": {
+        "model": "Jaguar Classic Vibe",
+        "brand": "Squier",
+        "category_id": 1,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 5,
+    "fields": {
+        "model": "Hummingbird",
+        "brand": "Gibson",
+        "category_id": 1,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 6,
+    "fields": {
+        "model": "Twin Reverb",
+        "brand": "Fender",
+        "category_id": 3,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 7,
+    "fields": {
+        "model": "Coronado",
+        "brand": "Supro",
+        "category_id": 3,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.gear",
+    "pk": 8,
+    "fields": {
+        "model": "4 Instrument Cables",
+        "brand": "Ernie Ball",
+        "category_id": 4,
+        "engineer_id": 1
+    }
+  }
+]

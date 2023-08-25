@@ -1,0 +1,34 @@
+[
+  {
+      "model": "studiomanagerapi.sessionengineer",
+      "pk": 1,
+      "fields": {
+          "session_id": 1,
+          "engineer_id": 1
+      }
+  },
+  {
+    "model": "studiomanagerapi.sessionengineer",
+    "pk": 2,
+    "fields": {
+        "session_id": 1,
+        "engineer_id": 2
+    }
+  },
+  {
+    "model": "studiomanagerapi.sessionengineer",
+    "pk": 3,
+    "fields": {
+        "session_id": 2,
+        "engineer_id": 1
+    }
+  },
+  {
+    "model": "studiomanagerapi.sessionengineer",
+    "pk": 4,
+    "fields": {
+        "session_id": 2,
+        "engineer_id": 2
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+      "model": "studiomanagerapi.category",
+      "pk": 1,
+      "fields": {
+          "title": "Instruments"
+      }
+  },
+  {
+    "model": "studiomanagerapi.category",
+    "pk": 2,
+    "fields": {
+        "title": "Microphones"
+    }
+  },
+  {
+    "model": "studiomanagerapi.category",
+    "pk": 3,
+    "fields": {
+        "title": "Amplifiers"
+    }
+  },
+  {
+    "model": "studiomanagerapi.category",
+    "pk": 4,
+    "fields": {
+        "title": "Essentials"
+    }
+  }
+]
