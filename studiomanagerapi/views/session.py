@@ -61,7 +61,7 @@ class SessionView(ViewSet):
         session.start_time=request.data["startTime"]
         session.end_time=request.data["endTime"]
         engineer = Engineer.objects.get(pk=request.data["engineerId"])
-        session.engineer = engineer
+        session.engineer_id = engineer
         session.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -80,4 +80,4 @@ class SessionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Session
         fields = ('id', 'artist', 'date', 'start_time', 'end_time', 'engineer_id')
-        depth: 1
+        depth = 2
