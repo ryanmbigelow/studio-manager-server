@@ -82,6 +82,7 @@ class SessionView(ViewSet):
     def get_engineers(self, request, pk):
         try:
             session_engineers = SessionEngineer.objects.filter(session_id=pk)
+            """a list comprehension to iterate through the returned session_engineers and retrieve each engineer_id so that they can be used to retrieve engineers from the engineer table"""
             engineers = [engineer.engineer_id for engineer in session_engineers]
             serializer = EngineerSerializer(engineers, many=True)
             return Response(serializer.data)
