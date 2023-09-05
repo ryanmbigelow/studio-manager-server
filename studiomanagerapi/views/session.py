@@ -1,8 +1,10 @@
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
+from rest_framework.decorators import action
 from rest_framework import serializers, status
-from studiomanagerapi.models import Session, Engineer
+from studiomanagerapi.models import Session, Engineer, SessionEngineer
+from studiomanagerapi.views import EngineerSerializer
 
 class SessionView(ViewSet):
     """Studio Manager session typesview"""
@@ -75,6 +77,16 @@ class SessionView(ViewSet):
         session = Session.objects.get(pk=pk)
         session.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    @action(methods=['get'], detail=True)
+    def get_engineers(self, request, pk):
+        try:
+            session_engineers = SessionEngineer.objects.filter(session_id=pk)
+            engineers = [engineer.engineer_id for engineer in session_engineers]
+            serializer = EngineerSerializer(engineers, many=True)
+            return Response(serializer.data)
+        except SessionEngineer.DoesNotExist:
+            return Response(False)
 
 class SessionSerializer(serializers.ModelSerializer):
     class Meta:

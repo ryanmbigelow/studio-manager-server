@@ -1,5 +1,5 @@
 from .category import CategoryView
-from .engineer import EngineerView
+from .engineer import EngineerView, EngineerSerializer
 from .gear import GearView
 from .session_engineer import SessionEngineerView
 from .session import SessionView
