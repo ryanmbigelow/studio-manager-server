@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import serializers, status
 from studiomanagerapi.models import Session, Engineer, SessionEngineer
-from studiomanagerapi.views import EngineerSerializer
+from studiomanagerapi.views import EngineerSerializer, SessionEngineerSerializer
 
 class SessionView(ViewSet):
     """Studio Manager session typesview"""

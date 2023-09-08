@@ -14,6 +14,11 @@ class SessionEngineerView(ViewSet):
             Response --  single JSON serialized session engineer dictionary
         """
         session_engineer = SessionEngineer.objects.get(pk=pk)
+        """Filter by engineer and session"""
+        engineer = request.query_params.get('engineer_id', None)
+        session = request.query_params.get('session_id', None)
+        if engineer is not None and session is not None:
+                session_engineer = SessionEngineer.filter(engineer_id=engineer, session_id=session)
         serializer = SessionEngineerSerializer(session_engineer)
         return Response(serializer.data)
 
