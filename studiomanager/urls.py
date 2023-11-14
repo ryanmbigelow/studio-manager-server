@@ -20,6 +20,10 @@ from rest_framework import routers
 from studiomanagerapi.views.auth import check_user, register_user
 from studiomanagerapi.views import CategoryView, EngineerView, GearView, SessionEngineerView, SessionView
 
+# each table has its own url
+# connected to the corresponding viewset.
+# when an api call is made,
+# the viewset is called and completes the request
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'categories', CategoryView, 'category')
 router.register(r'engineers', EngineerView, 'engineer')
@@ -27,6 +31,8 @@ router.register(r'gear', GearView, 'gear')
 router.register(r'session_engineers', SessionEngineerView, 'session_engineer')
 router.register(r'sessions', SessionView, 'session')
 
+# register and checkuser have their own url paths
+# because they need to be called for authentication
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
